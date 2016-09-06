@@ -1,0 +1,13 @@
+CONTIKI_PROJECT = mobile
+ifndef TARGET
+	TARGET=sky
+endif
+all: $(CONTIKI_PROJECT)
+
+DEFINES=WITH_MOBILEMAC NODE_IS_MOBILE RATE_CONTROL  #TDMA_OPTIMIZED
+
+
+
+CONTIKI = ../../..
+include $(CONTIKI)/Makefile.include
+
